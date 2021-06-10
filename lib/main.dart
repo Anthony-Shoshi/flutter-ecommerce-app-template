@@ -1,10 +1,11 @@
-import 'package:daily_needs/screens/home.dart';
-import 'package:daily_needs/screens/onBoardings/onBoardingOne.dart';
+import 'package:daily_needs/screens/splash.dart';
+import 'package:daily_needs/services/storageManager.dart';
 import 'package:flutter/material.dart';
 import 'constants/strings.dart';
 
-void main() {
+Future<void> main() async {
   runApp(MyApp());
+  await StorageManager.init();
 }
 
 class MyApp extends StatelessWidget {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: APP_NAME,
-      home: OnBoardingOne(),
+      home: Splash(),
     );
   }
 }
