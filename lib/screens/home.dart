@@ -1,4 +1,5 @@
 import 'package:daily_needs/constants/strings.dart';
+import 'package:daily_needs/screens/categories/categories.dart';
 import 'package:daily_needs/screens/products/details.dart';
 import 'package:daily_needs/widgets/bottomNav.dart';
 import 'package:flutter/material.dart';
@@ -159,14 +160,22 @@ class _HomeState extends State<Home> {
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.all(20.0),
-                                  child: Text(
-                                    "See All",
-                                    style: TextStyle(
-                                      fontSize: 16.0,
-                                      fontWeight: FontWeight.bold,
-                                      color: HexColor(PRIMARY_COLOR),
+                                GestureDetector(
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (_) => Categories(),
+                                    ),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(20.0),
+                                    child: Text(
+                                      "See All",
+                                      style: TextStyle(
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: HexColor(PRIMARY_COLOR),
+                                      ),
                                     ),
                                   ),
                                 ),
