@@ -88,7 +88,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         itemCount: contents.length,
                         itemBuilder: (_, index) {
                           return Padding(
-                            padding: const EdgeInsets.all(15.0),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 15.0,
+                            ),
                             child: Column(
                               children: [
                                 SizedBox(

@@ -3,6 +3,7 @@ const String PRIMARY_COLOR = "#2e9e4e";
 const String PRIMARY_COLOR_DARK = "#167330";
 const String SECONDARY_COLOR = "#bcebc9";
 const String COLOR_LIGHT_GREY = "#dce3de";
+const String COLOR_LIGHT_BLUE = "#dff1f5";
 const String COLOR_LIGHT_GREY_001 = "#ebf0ec";
 const String COLOR_DARK_GREY = "#bec4c0";
 const String COLOR_WHITE = "#ffffff";
