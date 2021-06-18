@@ -240,7 +240,14 @@ class _SignUpState extends State<SignUp> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Already have an account? "),
+                            Text(
+                              "Already have an account? ",
+                              style: TextStyle(
+                                color: HexColor(
+                                  COLOR_DARK_GREY,
+                                ),
+                              ),
+                            ),
                             InkWell(
                               onTap: () {
                                 Navigator.push(

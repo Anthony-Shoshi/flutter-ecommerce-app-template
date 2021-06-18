@@ -375,7 +375,7 @@ class _HomeState extends State<Home> {
                           bottom: 130.0,
                         ),
                         child: Container(
-                          height: size.height / 2 - 110.0,
+                          padding: EdgeInsets.only(bottom: 15.0),
                           decoration: BoxDecoration(
                             color: HexColor(COLOR_WHITE),
                             borderRadius: BorderRadius.circular(30.0),

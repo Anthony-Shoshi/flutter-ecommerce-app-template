@@ -1,18 +1,15 @@
 import 'package:daily_needs/constants/strings.dart';
-import 'package:daily_needs/screens/AuthenticationScreens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
 
-class SignIn extends StatefulWidget {
-  SignIn({Key? key}) : super(key: key);
+class RecoveryPassoword extends StatefulWidget {
+  RecoveryPassoword({Key? key}) : super(key: key);
 
   @override
-  _SignInState createState() => _SignInState();
+  _RecoveryPassowordState createState() => _RecoveryPassowordState();
 }
 
-class _SignInState extends State<SignIn> {
-  bool isRemember = false;
-
+class _RecoveryPassowordState extends State<RecoveryPassoword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +44,7 @@ class _SignInState extends State<SignIn> {
                                   top: 40.0, bottom: 20.0),
                               child: Center(
                                 child: Text(
-                                  "Sign in",
+                                  "Password Recovery",
                                   style: TextStyle(
                                     fontSize: 25.0,
                                     fontWeight: FontWeight.bold,
@@ -60,7 +57,7 @@ class _SignInState extends State<SignIn> {
                                   const EdgeInsets.symmetric(horizontal: 20.0),
                               child: Center(
                                 child: Text(
-                                  "Sign in with your email address and password to continue",
+                                  "Enter your email address to recover your password",
                                   style: TextStyle(
                                     fontSize: 18.0,
                                   ),
@@ -105,79 +102,6 @@ class _SignInState extends State<SignIn> {
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
                                 ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                left: 20.0,
-                              ),
-                              child: Text(
-                                "Password",
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: HexColor(COLOR_DARK_GREY),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(
-                                20.0,
-                              ),
-                              child: TextField(
-                                obscureText: true,
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  hintText: 'Enter Password',
-                                  hintStyle: TextStyle(
-                                      color: HexColor(COLOR_DARK_GREY)),
-                                  fillColor: HexColor(COLOR_LIGHT_GREY_001),
-                                  filled: true,
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: HexColor(COLOR_WHITE)),
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: HexColor(COLOR_WHITE)),
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  right: 20.0, bottom: 20.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Expanded(
-                                    child: CheckboxListTile(
-                                      title: Text(
-                                        "Remember me",
-                                        style: TextStyle(
-                                          color: HexColor(COLOR_DARK_GREY),
-                                        ),
-                                      ),
-                                      onChanged: (newValue) {
-                                        setState(() {
-                                          isRemember = newValue!;
-                                        });
-                                      },
-                                      value: isRemember,
-                                      controlAffinity: ListTileControlAffinity
-                                          .leading, //  <-- leading Checkbox
-                                    ),
-                                  ),
-                                  Text(
-                                    "Forgot Password?",
-                                    style: TextStyle(
-                                      fontSize: 18.0,
-                                      color: HexColor(COLOR_RED),
-                                    ),
-                                  ),
-                                ],
                               ),
                             ),
                           ],
@@ -225,7 +149,7 @@ class _SignInState extends State<SignIn> {
                             ),
                             child: Container(
                               child: Text(
-                                "Sign in",
+                                "Send",
                                 style: TextStyle(
                                   fontSize: 17.0,
                                 ),
@@ -233,37 +157,6 @@ class _SignInState extends State<SignIn> {
                             ),
                             onPressed: () {},
                           ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 17.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Already have an account? ",
-                              style: TextStyle(
-                                color: HexColor(
-                                  COLOR_DARK_GREY,
-                                ),
-                              ),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (_) => SignUp()));
-                              },
-                              child: Text(
-                                "Sign up",
-                                style: TextStyle(
-                                  color: HexColor(PRIMARY_COLOR),
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            )
-                          ],
                         ),
                       ),
                     ],

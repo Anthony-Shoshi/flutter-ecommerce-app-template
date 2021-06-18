@@ -1,4 +1,5 @@
 import 'package:badges/badges.dart';
+import 'package:daily_needs/screens/authenticationScreens/verification.dart';
 import 'package:daily_needs/utils/BNBCustomPainter.dart';
 import 'package:flutter/material.dart';
 
@@ -101,6 +102,10 @@ class _BottomNavState extends State<BottomNav> {
                           ),
                           onPressed: () {
                             setBottomBarIndex(1);
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => Verification()));
                           }),
                       Text(
                         "Order",
