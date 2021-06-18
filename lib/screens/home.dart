@@ -1,6 +1,7 @@
 import 'package:daily_needs/constants/strings.dart';
 import 'package:daily_needs/screens/categories/categories.dart';
 import 'package:daily_needs/screens/products/details.dart';
+import 'package:daily_needs/screens/products/searchProducts.dart';
 import 'package:daily_needs/widgets/bottomNav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
@@ -96,23 +97,33 @@ class _HomeState extends State<Home> {
                         width: double.infinity,
                         child: Padding(
                           padding: const EdgeInsets.all(13.0),
-                          child: Row(
-                            children: [
-                              Icon(
-                                Icons.search,
-                                color: HexColor(COLOR_DARK_GREY),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Text(
-                                "Search your daily needy food",
-                                style: TextStyle(
-                                  fontSize: 17.0,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => SearchProducts(),
+                                ),
+                              );
+                            },
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.search,
                                   color: HexColor(COLOR_DARK_GREY),
                                 ),
-                              ),
-                            ],
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text(
+                                  "Search your daily needy food",
+                                  style: TextStyle(
+                                    fontSize: 17.0,
+                                    color: HexColor(COLOR_DARK_GREY),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -433,6 +444,51 @@ class _HomeState extends State<Home> {
                                           child: Stack(
                                             children: [
                                               Positioned(
+                                                top: 0,
+                                                left: 0,
+                                                child: Container(
+                                                  height: 40.0,
+                                                  width: 40.0,
+                                                  decoration: BoxDecoration(
+                                                    color: HexColor(
+                                                        COLOR_LIGHT_GREY_001),
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                      topLeft:
+                                                          Radius.circular(20.0),
+                                                    ),
+                                                  ),
+                                                  child: Icon(
+                                                    Icons
+                                                        .favorite_border_outlined,
+                                                    color: HexColor(COLOR_RED),
+                                                  ),
+                                                ),
+                                              ),
+                                              Positioned(
+                                                bottom: 0,
+                                                right: 0,
+                                                child: Container(
+                                                  height: 40.0,
+                                                  width: 40.0,
+                                                  decoration: BoxDecoration(
+                                                    color:
+                                                        HexColor(PRIMARY_COLOR),
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                      bottomRight:
+                                                          Radius.circular(20.0),
+                                                    ),
+                                                  ),
+                                                  child: Icon(
+                                                    Icons
+                                                        .shopping_cart_outlined,
+                                                    color:
+                                                        HexColor(COLOR_WHITE),
+                                                  ),
+                                                ),
+                                              ),
+                                              Positioned(
                                                 child: Text(
                                                   "This is title",
                                                   style: TextStyle(
@@ -512,6 +568,51 @@ class _HomeState extends State<Home> {
                                           child: Stack(
                                             children: [
                                               Positioned(
+                                                top: 0,
+                                                left: 0,
+                                                child: Container(
+                                                  height: 40.0,
+                                                  width: 40.0,
+                                                  decoration: BoxDecoration(
+                                                    color: HexColor(
+                                                        COLOR_LIGHT_GREY_001),
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                      topLeft:
+                                                          Radius.circular(20.0),
+                                                    ),
+                                                  ),
+                                                  child: Icon(
+                                                    Icons
+                                                        .favorite_border_outlined,
+                                                    color: HexColor(COLOR_RED),
+                                                  ),
+                                                ),
+                                              ),
+                                              Positioned(
+                                                bottom: 0,
+                                                right: 0,
+                                                child: Container(
+                                                  height: 40.0,
+                                                  width: 40.0,
+                                                  decoration: BoxDecoration(
+                                                    color:
+                                                        HexColor(PRIMARY_COLOR),
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                      bottomRight:
+                                                          Radius.circular(20.0),
+                                                    ),
+                                                  ),
+                                                  child: Icon(
+                                                    Icons
+                                                        .shopping_cart_outlined,
+                                                    color:
+                                                        HexColor(COLOR_WHITE),
+                                                  ),
+                                                ),
+                                              ),
+                                              Positioned(
                                                 child: Text(
                                                   "This is title",
                                                   style: TextStyle(
@@ -590,6 +691,51 @@ class _HomeState extends State<Home> {
                                           ),
                                           child: Stack(
                                             children: [
+                                              Positioned(
+                                                top: 0,
+                                                left: 0,
+                                                child: Container(
+                                                  height: 40.0,
+                                                  width: 40.0,
+                                                  decoration: BoxDecoration(
+                                                    color: HexColor(
+                                                        COLOR_LIGHT_GREY_001),
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                      topLeft:
+                                                          Radius.circular(20.0),
+                                                    ),
+                                                  ),
+                                                  child: Icon(
+                                                    Icons
+                                                        .favorite_border_outlined,
+                                                    color: HexColor(COLOR_RED),
+                                                  ),
+                                                ),
+                                              ),
+                                              Positioned(
+                                                bottom: 0,
+                                                right: 0,
+                                                child: Container(
+                                                  height: 40.0,
+                                                  width: 40.0,
+                                                  decoration: BoxDecoration(
+                                                    color:
+                                                        HexColor(PRIMARY_COLOR),
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                      bottomRight:
+                                                          Radius.circular(20.0),
+                                                    ),
+                                                  ),
+                                                  child: Icon(
+                                                    Icons
+                                                        .shopping_cart_outlined,
+                                                    color:
+                                                        HexColor(COLOR_WHITE),
+                                                  ),
+                                                ),
+                                              ),
                                               Positioned(
                                                 child: Text(
                                                   "This is title",
