@@ -77,11 +77,11 @@ class _CategoriesState extends State<Categories> {
                                           child: Container(
                                             height: size.height / 10,
                                             child: Image.asset(
-                                                "assets/images/logo.png"),
+                                                "assets/images/2.png"),
                                           ),
                                         ),
                                         decoration: BoxDecoration(
-                                          color: Colors.lightGreenAccent,
+                                          color: HexColor(COLOR_LIGHT_BLUE),
                                           borderRadius:
                                               BorderRadius.circular(15.0),
                                         ),

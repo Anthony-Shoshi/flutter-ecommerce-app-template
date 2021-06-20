@@ -7,5 +7,6 @@ const String COLOR_LIGHT_BLUE = "#dff1f5";
 const String COLOR_LIGHT_GREY_001 = "#ebf0ec";
 const String COLOR_DARK_GREY = "#bec4c0";
 const String COLOR_WHITE = "#ffffff";
+const String COLOR_YELLOW = "#ffff00";
 const String COLOR_BLACK = "#000000";
 const String COLOR_RED = "#b01207";

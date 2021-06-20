@@ -226,7 +226,7 @@ class _HomeState extends State<Home> {
                                               padding:
                                                   const EdgeInsets.all(20.0),
                                               child: Image.asset(
-                                                "assets/images/logo.png",
+                                                "assets/images/1.png",
                                               ),
                                             ),
                                           ),
@@ -438,7 +438,7 @@ class _HomeState extends State<Home> {
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
                                               image: AssetImage(
-                                                  "assets/images/test.jpg"),
+                                                  "assets/images/1.png"),
                                             ),
                                           ),
                                           child: Stack(
@@ -456,12 +456,39 @@ class _HomeState extends State<Home> {
                                                         BorderRadius.only(
                                                       topLeft:
                                                           Radius.circular(20.0),
+                                                      bottomRight:
+                                                          Radius.circular(10.0),
                                                     ),
                                                   ),
                                                   child: Icon(
                                                     Icons
                                                         .favorite_border_outlined,
                                                     color: HexColor(COLOR_RED),
+                                                  ),
+                                                ),
+                                              ),
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Container(
+                                                  height: 120,
+                                                  width: double.infinity,
+                                                  decoration: new BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20.0),
+                                                    gradient:
+                                                        new LinearGradient(
+                                                      end: const Alignment(
+                                                          0.0, -1),
+                                                      begin: const Alignment(
+                                                          0.0, 0.4),
+                                                      colors: <Color>[
+                                                        const Color(0x8A000000),
+                                                        Colors.black12
+                                                            .withOpacity(0.0)
+                                                      ],
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -478,6 +505,8 @@ class _HomeState extends State<Home> {
                                                         BorderRadius.only(
                                                       bottomRight:
                                                           Radius.circular(20.0),
+                                                      topLeft:
+                                                          Radius.circular(10.0),
                                                     ),
                                                   ),
                                                   child: Icon(
@@ -522,7 +551,7 @@ class _HomeState extends State<Home> {
                                                       Icons
                                                           .star_border_outlined,
                                                       color: HexColor(
-                                                        COLOR_WHITE,
+                                                        COLOR_YELLOW,
                                                       ),
                                                       size: 17.0,
                                                     ),
@@ -533,10 +562,8 @@ class _HomeState extends State<Home> {
                                                       "4.3 (2325)",
                                                       style: TextStyle(
                                                         color: HexColor(
-                                                          COLOR_WHITE,
+                                                          COLOR_YELLOW,
                                                         ),
-                                                        fontWeight:
-                                                            FontWeight.bold,
                                                       ),
                                                     ),
                                                   ],
@@ -562,7 +589,7 @@ class _HomeState extends State<Home> {
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
                                               image: AssetImage(
-                                                  "assets/images/test.jpg"),
+                                                  "assets/images/3.png"),
                                             ),
                                           ),
                                           child: Stack(
@@ -580,12 +607,39 @@ class _HomeState extends State<Home> {
                                                         BorderRadius.only(
                                                       topLeft:
                                                           Radius.circular(20.0),
+                                                      bottomRight:
+                                                          Radius.circular(10.0),
                                                     ),
                                                   ),
                                                   child: Icon(
                                                     Icons
                                                         .favorite_border_outlined,
                                                     color: HexColor(COLOR_RED),
+                                                  ),
+                                                ),
+                                              ),
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Container(
+                                                  height: 120,
+                                                  width: double.infinity,
+                                                  decoration: new BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20.0),
+                                                    gradient:
+                                                        new LinearGradient(
+                                                      end: const Alignment(
+                                                          0.0, -1),
+                                                      begin: const Alignment(
+                                                          0.0, 0.4),
+                                                      colors: <Color>[
+                                                        const Color(0x8A000000),
+                                                        Colors.black12
+                                                            .withOpacity(0.0)
+                                                      ],
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -602,6 +656,8 @@ class _HomeState extends State<Home> {
                                                         BorderRadius.only(
                                                       bottomRight:
                                                           Radius.circular(20.0),
+                                                      topLeft:
+                                                          Radius.circular(10.0),
                                                     ),
                                                   ),
                                                   child: Icon(
@@ -646,7 +702,7 @@ class _HomeState extends State<Home> {
                                                       Icons
                                                           .star_border_outlined,
                                                       color: HexColor(
-                                                        COLOR_WHITE,
+                                                        COLOR_YELLOW,
                                                       ),
                                                       size: 17.0,
                                                     ),
@@ -657,10 +713,8 @@ class _HomeState extends State<Home> {
                                                       "4.3 (2325)",
                                                       style: TextStyle(
                                                         color: HexColor(
-                                                          COLOR_WHITE,
+                                                          COLOR_YELLOW,
                                                         ),
-                                                        fontWeight:
-                                                            FontWeight.bold,
                                                       ),
                                                     ),
                                                   ],
@@ -686,7 +740,7 @@ class _HomeState extends State<Home> {
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
                                               image: AssetImage(
-                                                  "assets/images/test.jpg"),
+                                                  "assets/images/2.png"),
                                             ),
                                           ),
                                           child: Stack(
@@ -704,12 +758,39 @@ class _HomeState extends State<Home> {
                                                         BorderRadius.only(
                                                       topLeft:
                                                           Radius.circular(20.0),
+                                                      bottomRight:
+                                                          Radius.circular(10.0),
                                                     ),
                                                   ),
                                                   child: Icon(
                                                     Icons
                                                         .favorite_border_outlined,
                                                     color: HexColor(COLOR_RED),
+                                                  ),
+                                                ),
+                                              ),
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Container(
+                                                  height: 120,
+                                                  width: double.infinity,
+                                                  decoration: new BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20.0),
+                                                    gradient:
+                                                        new LinearGradient(
+                                                      end: const Alignment(
+                                                          0.0, -1),
+                                                      begin: const Alignment(
+                                                          0.0, 0.4),
+                                                      colors: <Color>[
+                                                        const Color(0x8A000000),
+                                                        Colors.black12
+                                                            .withOpacity(0.0)
+                                                      ],
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -726,6 +807,8 @@ class _HomeState extends State<Home> {
                                                         BorderRadius.only(
                                                       bottomRight:
                                                           Radius.circular(20.0),
+                                                      topLeft:
+                                                          Radius.circular(10.0),
                                                     ),
                                                   ),
                                                   child: Icon(
@@ -770,7 +853,7 @@ class _HomeState extends State<Home> {
                                                       Icons
                                                           .star_border_outlined,
                                                       color: HexColor(
-                                                        COLOR_WHITE,
+                                                        COLOR_YELLOW,
                                                       ),
                                                       size: 17.0,
                                                     ),
@@ -781,10 +864,8 @@ class _HomeState extends State<Home> {
                                                       "4.3 (2325)",
                                                       style: TextStyle(
                                                         color: HexColor(
-                                                          COLOR_WHITE,
+                                                          COLOR_YELLOW,
                                                         ),
-                                                        fontWeight:
-                                                            FontWeight.bold,
                                                       ),
                                                     ),
                                                   ],

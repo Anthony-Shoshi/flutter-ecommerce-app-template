@@ -1,6 +1,8 @@
 import 'dart:ui';
 
+import 'package:daily_needs/constants/strings.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hex_color/flutter_hex_color.dart';
 
 class Details extends StatefulWidget {
   const Details({Key? key}) : super(key: key);
@@ -25,6 +27,11 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
+        iconTheme: IconThemeData(
+          color: HexColor(
+            COLOR_BLACK,
+          ),
+        ),
       ),
       extendBodyBehindAppBar: true,
       body: Column(
@@ -37,7 +44,7 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                     height: size.height / 3,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("assets/images/onboarding2.jpg"),
+                        image: AssetImage("assets/images/2.png"),
                       ),
                     ),
                   ),
@@ -298,81 +305,176 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                                     crossAxisCount: 2,
                                     scrollDirection: Axis.horizontal,
                                     children: List.generate(40, (index) {
-                                      return Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            color: Colors.green[100],
-                                            borderRadius:
-                                                BorderRadius.circular(10.0),
-                                          ),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                      return Column(
+                                        children: [
+                                          Column(
                                             children: [
-                                              Center(
-                                                child: SizedBox(
-                                                  height: 110.0,
-                                                  width: 110.0,
-                                                  child: Image.asset(
-                                                      "assets/images/logo.png"),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 10.0,
-                                                        vertical: 2.0),
-                                                child: Text(
-                                                  "This is a title",
-                                                  overflow:
-                                                      TextOverflow.ellipsis,
-                                                  style: TextStyle(
-                                                    fontSize: 17.0,
-                                                    fontWeight: FontWeight.bold,
+                                              Container(
+                                                height: size.height / 4 - 10,
+                                                width: size.height / 4 - 20,
+                                                decoration: BoxDecoration(
+                                                  color: HexColor(COLOR_WHITE),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          20.0),
+                                                  image: DecorationImage(
+                                                    fit: BoxFit.cover,
+                                                    image: AssetImage(
+                                                        "assets/images/3.png"),
                                                   ),
                                                 ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 10.0,
-                                                        vertical: 2.0),
-                                                child: Text(
-                                                  "\$17.00",
-                                                  style: TextStyle(
-                                                    fontSize: 15.0,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    left: 10.0,
-                                                    right: 10.0,
-                                                    top: 2.0),
-                                                child: Row(
+                                                child: Stack(
+                                                  clipBehavior: Clip.none,
                                                   children: [
-                                                    Icon(
-                                                      Icons.star,
-                                                      size: 12.0,
-                                                      color: Colors.grey[500],
-                                                    ),
-                                                    Text(
-                                                      "4.7 (2343)",
-                                                      style: TextStyle(
-                                                        color: Colors.grey[500],
-                                                        fontSize: 12.0,
-                                                        fontWeight:
-                                                            FontWeight.bold,
+                                                    Positioned(
+                                                      top: 0,
+                                                      left: 0,
+                                                      child: Container(
+                                                        height: 40.0,
+                                                        width: 40.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: HexColor(
+                                                              COLOR_LIGHT_GREY_001),
+                                                          borderRadius:
+                                                              BorderRadius.only(
+                                                            topLeft:
+                                                                Radius.circular(
+                                                                    20.0),
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                                    10.0),
+                                                          ),
+                                                        ),
+                                                        child: Icon(
+                                                          Icons
+                                                              .favorite_border_outlined,
+                                                          color: HexColor(
+                                                              COLOR_RED),
+                                                        ),
                                                       ),
+                                                    ),
+                                                    Align(
+                                                      alignment: Alignment
+                                                          .bottomCenter,
+                                                      child: Container(
+                                                        height: 120,
+                                                        width: double.infinity,
+                                                        decoration:
+                                                            new BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      20.0),
+                                                          gradient:
+                                                              new LinearGradient(
+                                                            end:
+                                                                const Alignment(
+                                                                    0.0, -1),
+                                                            begin:
+                                                                const Alignment(
+                                                                    0.0, 0.4),
+                                                            colors: <Color>[
+                                                              const Color(
+                                                                  0x8A000000),
+                                                              Colors.black12
+                                                                  .withOpacity(
+                                                                      0.0)
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Positioned(
+                                                      bottom: 0,
+                                                      right: 0,
+                                                      child: Container(
+                                                        height: 40.0,
+                                                        width: 40.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: HexColor(
+                                                              PRIMARY_COLOR),
+                                                          borderRadius:
+                                                              BorderRadius.only(
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                                    20.0),
+                                                            topLeft:
+                                                                Radius.circular(
+                                                                    10.0),
+                                                          ),
+                                                        ),
+                                                        child: Icon(
+                                                          Icons
+                                                              .shopping_cart_outlined,
+                                                          color: HexColor(
+                                                              COLOR_WHITE),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Positioned(
+                                                      child: Text(
+                                                        "This is title",
+                                                        style: TextStyle(
+                                                          color: HexColor(
+                                                            COLOR_WHITE,
+                                                          ),
+                                                          fontSize: 18.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                      ),
+                                                      bottom: 50,
+                                                      left: 15,
+                                                    ),
+                                                    Positioned(
+                                                      child: Text(
+                                                        "\$25.00",
+                                                        style: TextStyle(
+                                                          color: HexColor(
+                                                            COLOR_WHITE,
+                                                          ),
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                      ),
+                                                      bottom: 30,
+                                                      left: 15,
+                                                    ),
+                                                    Positioned(
+                                                      child: Row(
+                                                        children: [
+                                                          Icon(
+                                                            Icons
+                                                                .star_border_outlined,
+                                                            color: HexColor(
+                                                              COLOR_YELLOW,
+                                                            ),
+                                                            size: 17.0,
+                                                          ),
+                                                          SizedBox(
+                                                            width: 5.0,
+                                                          ),
+                                                          Text(
+                                                            "4.3 (2325)",
+                                                            style: TextStyle(
+                                                              color: HexColor(
+                                                                COLOR_YELLOW,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      bottom: 10,
+                                                      left: 15,
                                                     ),
                                                   ],
                                                 ),
                                               ),
                                             ],
                                           ),
-                                        ),
+                                        ],
                                       );
                                     }),
                                   ),

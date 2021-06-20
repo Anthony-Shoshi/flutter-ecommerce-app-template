@@ -77,6 +77,7 @@ class _SearchProductsState extends State<SearchProducts> {
                     top: 6.0,
                   ),
                   child: GridView.count(
+                    mainAxisSpacing: 10.0,
                     padding: EdgeInsets.symmetric(vertical: 10.0),
                     scrollDirection: Axis.vertical,
                     crossAxisCount: 2,
@@ -89,13 +90,13 @@ class _SearchProductsState extends State<SearchProducts> {
                               children: [
                                 Container(
                                   height: screenHeight / 4 - 10,
-                                  width: screenHeight / 4 * 0.9 - 5,
+                                  width: screenHeight / 4 - 20,
                                   decoration: BoxDecoration(
+                                    color: HexColor(COLOR_WHITE),
                                     borderRadius: BorderRadius.circular(20.0),
                                     image: DecorationImage(
                                       fit: BoxFit.cover,
-                                      image:
-                                          AssetImage("assets/images/test.jpg"),
+                                      image: AssetImage("assets/images/3.png"),
                                     ),
                                   ),
                                   child: Stack(
@@ -112,11 +113,32 @@ class _SearchProductsState extends State<SearchProducts> {
                                                 HexColor(COLOR_LIGHT_GREY_001),
                                             borderRadius: BorderRadius.only(
                                               topLeft: Radius.circular(20.0),
+                                              bottomRight:
+                                                  Radius.circular(10.0),
                                             ),
                                           ),
                                           child: Icon(
                                             Icons.favorite_border_outlined,
                                             color: HexColor(COLOR_RED),
+                                          ),
+                                        ),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                          height: 120,
+                                          width: double.infinity,
+                                          decoration: new BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20.0),
+                                            gradient: new LinearGradient(
+                                              end: const Alignment(0.0, -1),
+                                              begin: const Alignment(0.0, 0.4),
+                                              colors: <Color>[
+                                                const Color(0x8A000000),
+                                                Colors.black12.withOpacity(0.0)
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -131,6 +153,7 @@ class _SearchProductsState extends State<SearchProducts> {
                                             borderRadius: BorderRadius.only(
                                               bottomRight:
                                                   Radius.circular(20.0),
+                                              topLeft: Radius.circular(10.0),
                                             ),
                                           ),
                                           child: Icon(
@@ -172,7 +195,7 @@ class _SearchProductsState extends State<SearchProducts> {
                                             Icon(
                                               Icons.star_border_outlined,
                                               color: HexColor(
-                                                COLOR_WHITE,
+                                                COLOR_YELLOW,
                                               ),
                                               size: 17.0,
                                             ),
@@ -183,9 +206,8 @@ class _SearchProductsState extends State<SearchProducts> {
                                               "4.3 (2325)",
                                               style: TextStyle(
                                                 color: HexColor(
-                                                  COLOR_WHITE,
+                                                  COLOR_YELLOW,
                                                 ),
-                                                fontWeight: FontWeight.bold,
                                               ),
                                             ),
                                           ],
