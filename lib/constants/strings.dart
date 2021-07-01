@@ -10,3 +10,4 @@ const String COLOR_WHITE = "#ffffff";
 const String COLOR_YELLOW = "#ffff00";
 const String COLOR_BLACK = "#000000";
 const String COLOR_RED = "#b01207";
+const String COLOR_LIGHT_RED = "#d1392e";

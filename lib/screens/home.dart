@@ -540,7 +540,10 @@ class _HomeState extends State<Home> {
                                                 ),
                                                 Positioned(
                                                   child: Text(
-                                                    "This is title",
+                                                    "This is title sdsfdsfd dfdf sdsdf",
+                                                    maxLines: 1,
+                                                    overflow:
+                                                        TextOverflow.ellipsis,
                                                     style: TextStyle(
                                                       color: HexColor(
                                                         COLOR_WHITE,

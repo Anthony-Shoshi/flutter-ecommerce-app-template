@@ -1,4 +1,6 @@
 import 'package:badges/badges.dart';
+import 'package:daily_needs/screens/home.dart';
+import 'package:daily_needs/screens/products/cart.dart';
 import 'package:daily_needs/screens/products/searchProducts.dart';
 import 'package:daily_needs/utils/BNBCustomPainter.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +57,14 @@ class _BottomNavState extends State<BottomNav> {
                     size: 25.0,
                   ),
                   elevation: 0.1,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => Cart(),
+                      ),
+                    );
+                  },
                 ),
               ),
             ),
@@ -77,6 +86,12 @@ class _BottomNavState extends State<BottomNav> {
                         ),
                         onPressed: () {
                           setBottomBarIndex(0);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Home(),
+                            ),
+                          );
                         },
                         splashColor: Colors.white,
                       ),
@@ -103,9 +118,11 @@ class _BottomNavState extends State<BottomNav> {
                           onPressed: () {
                             setBottomBarIndex(1);
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (_) => SearchProducts()));
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => SearchProducts(),
+                              ),
+                            );
                           }),
                       Text(
                         "Order",
