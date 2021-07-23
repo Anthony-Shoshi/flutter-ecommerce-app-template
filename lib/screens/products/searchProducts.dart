@@ -74,7 +74,10 @@ class _SearchProductsState extends State<SearchProducts> {
                 ),
                 child: Container(
                   padding: EdgeInsets.only(
-                    top: 6.0,
+                    top: 10.0,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
                   ),
                   child: GridView.count(
                     mainAxisSpacing: 10.0,

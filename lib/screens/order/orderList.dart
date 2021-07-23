@@ -1,4 +1,5 @@
 import 'package:daily_needs/constants/strings.dart';
+import 'package:daily_needs/screens/order/orderDetails.dart';
 import 'package:daily_needs/widgets/bottomNav.dart';
 import 'package:daily_needs/widgets/orderWidg.dart';
 import 'package:flutter/material.dart';
@@ -160,12 +161,20 @@ class _OrderListState extends State<OrderList>
                                 padding:
                                     EdgeInsets.only(top: 5.0, bottom: 120.0),
                                 children: [
-                                  OrderWidg(
-                                    image: 'assets/images/3.png',
-                                    orderDate: '23 Jul, 2021',
-                                    price: '\$34.90',
-                                    productTitle: 'Pineapple (1KG)',
-                                    status: 'Processing',
+                                  GestureDetector(
+                                    onTap: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (_) => OrderDetails(),
+                                      ),
+                                    ),
+                                    child: OrderWidg(
+                                      image: 'assets/images/3.png',
+                                      orderDate: '23 Jul, 2021',
+                                      price: '\$34.90',
+                                      productTitle: 'Pineapple (1KG)',
+                                      status: 'Processing',
+                                    ),
                                   ),
                                   OrderWidg(
                                     image: 'assets/images/1.png',

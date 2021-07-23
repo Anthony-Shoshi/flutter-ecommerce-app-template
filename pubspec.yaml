@@ -28,6 +28,7 @@ dependencies:
   shared_preferences: ^2.0.6
   badges: ^2.0.1
   flutter_verification_code: ^1.0.3
+  timeline_tile: ^2.0.0
 
 dev_dependencies:
   flutter_test:
