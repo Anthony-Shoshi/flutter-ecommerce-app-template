@@ -1,4 +1,5 @@
 import 'package:badges/badges.dart';
+import 'package:daily_needs/screens/authenticationScreens/verification.dart';
 import 'package:daily_needs/screens/home.dart';
 import 'package:daily_needs/screens/products/cart.dart';
 import 'package:daily_needs/screens/products/searchProducts.dart';
@@ -120,7 +121,7 @@ class _BottomNavState extends State<BottomNav> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (_) => SearchProducts(),
+                                builder: (_) => Verification(),
                               ),
                             );
                           }),

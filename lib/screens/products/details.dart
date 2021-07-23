@@ -50,7 +50,7 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.grey[200],
+                      color: HexColor(COLOR_LIGHT_GREY),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20.0),
                         topRight: Radius.circular(20.0),
@@ -64,7 +64,7 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                             height: size.height / 4,
                             width: size.width,
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: HexColor(COLOR_WHITE),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             child: Column(
@@ -140,14 +140,14 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                                         height: 26.0,
                                         width: 26.0,
                                         decoration: BoxDecoration(
-                                          color: Colors.green,
+                                          color: HexColor(PRIMARY_COLOR),
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                         ),
                                         child: Center(
                                           child: Icon(
                                             Icons.remove,
-                                            color: Colors.white,
+                                            color: HexColor(COLOR_WHITE),
                                           ),
                                         ),
                                       ),
@@ -167,14 +167,14 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                                         height: 26.0,
                                         width: 26.0,
                                         decoration: BoxDecoration(
-                                          color: Colors.green,
+                                          color: HexColor(PRIMARY_COLOR),
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                         ),
                                         child: Center(
                                           child: Icon(
                                             Icons.add,
-                                            color: Colors.white,
+                                            color: HexColor(COLOR_WHITE),
                                           ),
                                         ),
                                       ),
@@ -190,7 +190,7 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                               height: size.height / 3,
                               width: size.width,
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color: HexColor(COLOR_WHITE),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               child: Column(
@@ -200,7 +200,8 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                                       indicator: BoxDecoration(
                                         border: Border(
                                           bottom: BorderSide(
-                                              color: Colors.green, width: 3.0),
+                                              color: HexColor(PRIMARY_COLOR),
+                                              width: 3.0),
                                         ),
                                       ),
                                       labelColor: Colors.black,
@@ -228,7 +229,8 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                                                   child: Container(
                                                     width: size.width,
                                                     decoration: BoxDecoration(
-                                                      color: Colors.green,
+                                                      color: HexColor(
+                                                          PRIMARY_COLOR),
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               10.0),
@@ -240,7 +242,8 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                                                       child: Text(
                                                         "I understand and accept the rights which have been granted to me. I take full responsibility for the login names and passwords issued to me and I agree that I will be held responsible for any breach of confidentiality or actions resulting from misuse.  I agree that I have responsibility to exercise care in the treatment of personal data and to ensure that such information is not disclosed to any unauthorized person.",
                                                         style: TextStyle(
-                                                            color: Colors.white,
+                                                            color: HexColor(
+                                                                COLOR_WHITE),
                                                             fontSize: 15.0),
                                                       ),
                                                     ),
@@ -254,7 +257,8 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                                               child: Container(
                                                 width: size.width,
                                                 decoration: BoxDecoration(
-                                                  color: Colors.green,
+                                                  color:
+                                                      HexColor(PRIMARY_COLOR),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10.0),
@@ -265,7 +269,8 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                                                   child: Text(
                                                     "Heelllo thisss isss a revieWWW sectionnnnn. you caaannnnn watchhhh frommmm",
                                                     style: TextStyle(
-                                                        color: Colors.white,
+                                                        color: HexColor(
+                                                            COLOR_WHITE),
                                                         fontSize: 15.0),
                                                   ),
                                                 ),
@@ -283,7 +288,7 @@ class _DetailsState extends State<Details> with SingleTickerProviderStateMixin {
                           Container(
                             margin: EdgeInsets.only(top: 15.0),
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: HexColor(COLOR_WHITE),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             child: Column(
