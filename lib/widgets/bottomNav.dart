@@ -1,6 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:daily_needs/screens/authenticationScreens/verification.dart';
 import 'package:daily_needs/screens/home.dart';
+import 'package:daily_needs/screens/more.dart';
 import 'package:daily_needs/screens/order/orderList.dart';
 import 'package:daily_needs/screens/products/cart.dart';
 import 'package:daily_needs/screens/products/searchProducts.dart';
@@ -91,7 +92,7 @@ class _BottomNavState extends State<BottomNav> {
                           Icons.home_outlined,
                           color: currentIndex == 0
                               ? Colors.white
-                              : Colors.grey[300],
+                              : Colors.grey[400],
                         ),
                         onPressed: () {
                           setBottomBarIndex(0);
@@ -109,7 +110,7 @@ class _BottomNavState extends State<BottomNav> {
                         style: TextStyle(
                           color: currentIndex == 0
                               ? Colors.white
-                              : Colors.grey[300],
+                              : Colors.grey[400],
                         ),
                       ),
                     ],
@@ -122,7 +123,7 @@ class _BottomNavState extends State<BottomNav> {
                             Icons.shopping_bag_outlined,
                             color: currentIndex == 1
                                 ? Colors.white
-                                : Colors.grey[300],
+                                : Colors.grey[400],
                           ),
                           onPressed: () {
                             setBottomBarIndex(1);
@@ -138,7 +139,7 @@ class _BottomNavState extends State<BottomNav> {
                         style: TextStyle(
                           color: currentIndex == 1
                               ? Colors.white
-                              : Colors.grey[300],
+                              : Colors.grey[400],
                         ),
                       ),
                     ],
@@ -154,7 +155,7 @@ class _BottomNavState extends State<BottomNav> {
                             Icons.card_giftcard_outlined,
                             color: currentIndex == 2
                                 ? Colors.white
-                                : Colors.grey[300],
+                                : Colors.grey[400],
                           ),
                           onPressed: () {
                             setBottomBarIndex(2);
@@ -164,7 +165,7 @@ class _BottomNavState extends State<BottomNav> {
                         style: TextStyle(
                           color: currentIndex == 2
                               ? Colors.white
-                              : Colors.grey[300],
+                              : Colors.grey[400],
                         ),
                       ),
                     ],
@@ -177,9 +178,15 @@ class _BottomNavState extends State<BottomNav> {
                             Icons.more_horiz_outlined,
                             color: currentIndex == 3
                                 ? Colors.white
-                                : Colors.grey[300],
+                                : Colors.grey[400],
                           ),
                           onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => More(),
+                              ),
+                            );
                             setBottomBarIndex(3);
                           }),
                       Text(
@@ -187,7 +194,7 @@ class _BottomNavState extends State<BottomNav> {
                         style: TextStyle(
                           color: currentIndex == 3
                               ? Colors.white
-                              : Colors.grey[300],
+                              : Colors.grey[400],
                         ),
                       ),
                     ],
