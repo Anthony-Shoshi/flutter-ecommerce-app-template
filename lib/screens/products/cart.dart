@@ -303,7 +303,9 @@ class _CartState extends State<Cart> {
                 ),
               ),
             ),
-            BottomNav(),
+            BottomNav(
+              currentPageArg: 0,
+            ),
           ],
         ),
       ),

@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:daily_needs/constants/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';

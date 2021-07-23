@@ -105,7 +105,9 @@ class _CategoriesState extends State<Categories> {
                 ),
               ),
             ),
-            BottomNav(),
+            BottomNav(
+              currentPageArg: 0,
+            ),
           ],
         ),
       ),

@@ -917,7 +917,9 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            BottomNav(),
+            BottomNav(
+              currentPageArg: 0,
+            ),
           ],
         ),
       ),

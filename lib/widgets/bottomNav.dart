@@ -1,13 +1,15 @@
 import 'package:badges/badges.dart';
 import 'package:daily_needs/screens/authenticationScreens/verification.dart';
 import 'package:daily_needs/screens/home.dart';
+import 'package:daily_needs/screens/order/orderList.dart';
 import 'package:daily_needs/screens/products/cart.dart';
 import 'package:daily_needs/screens/products/searchProducts.dart';
 import 'package:daily_needs/utils/BNBCustomPainter.dart';
 import 'package:flutter/material.dart';
 
 class BottomNav extends StatefulWidget {
-  BottomNav({Key? key}) : super(key: key);
+  final int currentPageArg;
+  BottomNav({Key? key, required this.currentPageArg}) : super(key: key);
 
   @override
   _BottomNavState createState() => _BottomNavState();
@@ -20,6 +22,12 @@ class _BottomNavState extends State<BottomNav> {
     setState(() {
       currentIndex = index;
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    currentIndex = widget.currentPageArg;
   }
 
   @override
@@ -121,7 +129,7 @@ class _BottomNavState extends State<BottomNav> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (_) => Verification(),
+                                builder: (_) => OrderList(),
                               ),
                             );
                           }),
