@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:daily_needs/constants/strings.dart';
 import 'package:daily_needs/models/Address.dart';
 import 'package:daily_needs/models/Payments.dart';
+import 'package:daily_needs/screens/home.dart';
+import 'package:daily_needs/screens/order/orderDetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
 
@@ -378,9 +380,8 @@ class _CheckoutState extends State<Checkout>
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {
-                      print("Hello");
-                    },
+                    onTap: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => OrderDetails())),
                     child: Container(
                       height: 45.0,
                       width: 170.0,
@@ -406,6 +407,8 @@ class _CheckoutState extends State<Checkout>
                     height: 10.0,
                   ),
                   InkWell(
+                    onTap: () => Navigator.push(
+                        context, MaterialPageRoute(builder: (_) => Home())),
                     child: Text(
                       "Go Back",
                       style: TextStyle(

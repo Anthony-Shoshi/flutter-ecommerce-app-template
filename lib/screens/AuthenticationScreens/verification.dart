@@ -1,4 +1,5 @@
 import 'package:daily_needs/constants/strings.dart';
+import 'package:daily_needs/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
@@ -189,7 +190,10 @@ class _VerificationState extends State<Verification> {
                                 ),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (_) => Home()));
+                            },
                           ),
                         ),
                       ),

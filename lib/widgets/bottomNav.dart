@@ -4,6 +4,7 @@ import 'package:daily_needs/screens/home.dart';
 import 'package:daily_needs/screens/more.dart';
 import 'package:daily_needs/screens/order/orderList.dart';
 import 'package:daily_needs/screens/products/cart.dart';
+import 'package:daily_needs/screens/products/offer.dart';
 import 'package:daily_needs/screens/products/searchProducts.dart';
 import 'package:daily_needs/utils/BNBCustomPainter.dart';
 import 'package:flutter/material.dart';
@@ -158,6 +159,12 @@ class _BottomNavState extends State<BottomNav> {
                                 : Colors.grey[400],
                           ),
                           onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => Offer(),
+                              ),
+                            );
                             setBottomBarIndex(2);
                           }),
                       Text(

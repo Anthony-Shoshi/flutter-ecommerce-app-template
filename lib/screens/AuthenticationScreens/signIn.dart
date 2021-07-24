@@ -1,5 +1,6 @@
 import 'package:daily_needs/constants/strings.dart';
 import 'package:daily_needs/screens/AuthenticationScreens/signup.dart';
+import 'package:daily_needs/screens/authenticationScreens/recoveryPassword.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
 
@@ -170,11 +171,18 @@ class _SignInState extends State<SignIn> {
                                           .leading, //  <-- leading Checkbox
                                     ),
                                   ),
-                                  Text(
-                                    "Forgot Password?",
-                                    style: TextStyle(
-                                      fontSize: 18.0,
-                                      color: HexColor(COLOR_RED),
+                                  InkWell(
+                                    onTap: () => Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (_) =>
+                                                RecoveryPassoword())),
+                                    child: Text(
+                                      "Forgot Password?",
+                                      style: TextStyle(
+                                        fontSize: 18.0,
+                                        color: HexColor(COLOR_RED),
+                                      ),
                                     ),
                                   ),
                                 ],
