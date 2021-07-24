@@ -1,4 +1,6 @@
 import 'package:daily_needs/constants/strings.dart';
+import 'package:daily_needs/models/Category.dart';
+import 'package:daily_needs/screens/products/categoryProducts.dart';
 import 'package:daily_needs/widgets/bottomNav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
@@ -13,7 +15,8 @@ class Categories extends StatefulWidget {
 class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final double screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -55,49 +58,57 @@ class _CategoriesState extends State<Categories> {
                   child: Column(
                     children: [
                       Expanded(
-                        child: GridView.count(
-                          padding: EdgeInsets.only(
-                            top: 10.0,
-                            right: 10.0,
-                            left: 10.0,
-                            bottom: 100.0,
+                        child: GridView.builder(
+                          padding: EdgeInsets.only(top: 15.0, bottom: 120.0),
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3,
                           ),
                           scrollDirection: Axis.vertical,
-                          crossAxisCount: 3,
-                          children: List.generate(
-                            40,
-                            (index) {
-                              return Column(
-                                children: [
-                                  Expanded(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Container(
-                                        child: Center(
-                                          child: Container(
-                                            height: size.height / 10,
-                                            child: Image.asset(
-                                                "assets/images/2.png"),
-                                          ),
-                                        ),
-                                        decoration: BoxDecoration(
-                                          color: HexColor(COLOR_LIGHT_BLUE),
-                                          borderRadius:
-                                              BorderRadius.circular(15.0),
+                          itemCount: categories.length,
+                          itemBuilder: (context, index) {
+                            var category = categories[index];
+                            return Column(
+                              children: [
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (_) => CategoryProducts(
+                                          categoryName:
+                                              category.title.toString(),
                                         ),
                                       ),
+                                    );
+                                  },
+                                  child: Container(
+                                    height: screenHeight / 9 + 2,
+                                    width: screenHeight / 9 + 2,
+                                    padding: EdgeInsets.all(10.0),
+                                    decoration: BoxDecoration(
+                                      color: HexColor(
+                                        COLOR_LIGHT_BLUE,
+                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                    child: Image.asset(
+                                      category.image.toString(),
                                     ),
                                   ),
-                                  Text(
-                                    "Title ${index + 1}",
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    category.title.toString(),
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                ],
-                              );
-                            },
-                          ),
+                                ),
+                              ],
+                            );
+                          },
                         ),
                       ),
                     ],

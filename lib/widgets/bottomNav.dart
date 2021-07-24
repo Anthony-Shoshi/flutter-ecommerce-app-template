@@ -1,11 +1,9 @@
 import 'package:badges/badges.dart';
-import 'package:daily_needs/screens/authenticationScreens/verification.dart';
 import 'package:daily_needs/screens/home.dart';
 import 'package:daily_needs/screens/more.dart';
 import 'package:daily_needs/screens/order/orderList.dart';
 import 'package:daily_needs/screens/products/cart.dart';
 import 'package:daily_needs/screens/products/offer.dart';
-import 'package:daily_needs/screens/products/searchProducts.dart';
 import 'package:daily_needs/utils/BNBCustomPainter.dart';
 import 'package:flutter/material.dart';
 

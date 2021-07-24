@@ -17,17 +17,13 @@ class Checkout extends StatefulWidget {
 
 class _CheckoutState extends State<Checkout>
     with SingleTickerProviderStateMixin {
-  late TabController _controller;
-
   @override
   void initState() {
     super.initState();
-    _controller = new TabController(length: 2, vsync: this);
   }
 
   @override
   Widget build(BuildContext context) {
-    final double screenHeight = MediaQuery.of(context).size.height;
     final double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(

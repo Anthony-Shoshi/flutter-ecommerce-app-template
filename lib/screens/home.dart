@@ -1,4 +1,5 @@
 import 'package:daily_needs/constants/strings.dart';
+import 'package:daily_needs/models/Category.dart';
 import 'package:daily_needs/screens/categories/categories.dart';
 import 'package:daily_needs/screens/products/categoryProducts.dart';
 import 'package:daily_needs/screens/products/details.dart';
@@ -152,7 +153,7 @@ class _HomeState extends State<Home> {
                     Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Container(
-                        height: screenHeight / 4,
+                        height: screenHeight / 4 + 10,
                         decoration: BoxDecoration(
                           color: HexColor(COLOR_WHITE),
                           borderRadius: BorderRadius.circular(30.0),
@@ -194,46 +195,42 @@ class _HomeState extends State<Home> {
                               ],
                             ),
                             Expanded(
-                              child: GridView.count(
+                              child: GridView.builder(
+                                gridDelegate:
+                                    SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 1,
+                                ),
                                 scrollDirection: Axis.horizontal,
-                                crossAxisCount: 1,
-                                children: List.generate(40, (index) {
+                                itemCount: categories.length,
+                                itemBuilder: (context, index) {
+                                  var category = categories[index];
                                   return Column(
                                     children: [
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                          horizontal: 13.0,
-                                        ),
-                                        child: GestureDetector(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (_) =>
-                                                    CategoryProducts(
-                                                  category_name:
-                                                      'Title ${index + 1}',
-                                                ),
-                                              ),
-                                            );
-                                          },
-                                          child: Container(
-                                            height: screenHeight / 8,
-                                            width: screenWidth / 3,
-                                            decoration: BoxDecoration(
-                                              color: HexColor(
-                                                COLOR_LIGHT_BLUE,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(15.0),
-                                            ),
-                                            child: Padding(
-                                              padding:
-                                                  const EdgeInsets.all(20.0),
-                                              child: Image.asset(
-                                                "assets/images/1.png",
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (_) => CategoryProducts(
+                                                categoryName:
+                                                    category.title.toString(),
                                               ),
                                             ),
+                                          );
+                                        },
+                                        child: Container(
+                                          height: screenHeight / 8 + 2,
+                                          width: screenHeight / 8 + 2,
+                                          padding: EdgeInsets.all(10.0),
+                                          decoration: BoxDecoration(
+                                            color: HexColor(
+                                              COLOR_LIGHT_BLUE,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(15.0),
+                                          ),
+                                          child: Image.asset(
+                                            category.image.toString(),
                                           ),
                                         ),
                                       ),
@@ -241,14 +238,17 @@ class _HomeState extends State<Home> {
                                         height: 10.0,
                                       ),
                                       Text(
-                                        "Title ${index + 1}",
+                                        category.title.toString(),
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
+                                      SizedBox(
+                                        height: 10.0,
+                                      ),
                                     ],
                                   );
-                                }),
+                                },
                               ),
                             ),
                           ],

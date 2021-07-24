@@ -102,8 +102,12 @@ class _ChangePasswordState extends State<ChangePassword> {
                                 obscureText: _obscureText1,
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
-                                  suffixIcon:
-                                      Icon(Icons.remove_red_eye_outlined),
+                                  suffixIcon: InkWell(
+                                    onTap: () {
+                                      toggleObscure(1);
+                                    },
+                                    child: Icon(Icons.remove_red_eye_outlined),
+                                  ),
                                   hintText: 'Enter Old Password',
                                   hintStyle: TextStyle(
                                       color: HexColor(COLOR_DARK_GREY)),
@@ -143,8 +147,12 @@ class _ChangePasswordState extends State<ChangePassword> {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   hintText: 'Enter New Password',
-                                  suffixIcon:
-                                      Icon(Icons.remove_red_eye_outlined),
+                                  suffixIcon: InkWell(
+                                    onTap: () {
+                                      toggleObscure(2);
+                                    },
+                                    child: Icon(Icons.remove_red_eye_outlined),
+                                  ),
                                   hintStyle: TextStyle(
                                       color: HexColor(COLOR_DARK_GREY)),
                                   fillColor: HexColor(COLOR_LIGHT_GREY_001),

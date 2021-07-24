@@ -14,8 +14,6 @@ class OrderDetails extends StatefulWidget {
 class _OrderDetailsState extends State<OrderDetails> {
   @override
   Widget build(BuildContext context) {
-    final double screenHeight = MediaQuery.of(context).size.height;
-    final double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -195,7 +193,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                           ),
                         ),
                         endChild: Container(
-                          padding: EdgeInsets.only(top: 40.0, left: 25.0),
+                          padding: EdgeInsets.only(top: 35.0, left: 25.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -274,7 +272,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                           color: HexColor(COLOR_LIGHT_GREY),
                         ),
                         endChild: Container(
-                          padding: EdgeInsets.only(top: 45.0, left: 25.0),
+                          padding: EdgeInsets.only(top: 50.0, left: 25.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [

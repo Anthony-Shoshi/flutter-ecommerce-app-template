@@ -1,5 +1,6 @@
 import 'package:daily_needs/constants/strings.dart';
 import 'package:daily_needs/screens/AuthenticationScreens/signIn.dart';
+import 'package:daily_needs/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
 
@@ -11,6 +12,8 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  bool _obscurePassword = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -159,10 +162,18 @@ class _SignUpState extends State<SignUp> {
                                 20.0,
                               ),
                               child: TextField(
-                                obscureText: true,
+                                obscureText: _obscurePassword,
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   hintText: 'Enter Password',
+                                  suffixIcon: InkWell(
+                                    onTap: () {
+                                      setState(() {
+                                        _obscurePassword = !_obscurePassword;
+                                      });
+                                    },
+                                    child: Icon(Icons.remove_red_eye_outlined),
+                                  ),
                                   hintStyle: TextStyle(
                                       color: HexColor(COLOR_DARK_GREY)),
                                   fillColor: HexColor(COLOR_LIGHT_GREY_001),
@@ -231,7 +242,10 @@ class _SignUpState extends State<SignUp> {
                                 ),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacement(context,
+                                  MaterialPageRoute(builder: (_) => Home()));
+                            },
                           ),
                         ),
                       ),

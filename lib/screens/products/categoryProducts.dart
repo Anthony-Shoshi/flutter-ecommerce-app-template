@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
 
 class CategoryProducts extends StatefulWidget {
-  final String category_name;
+  final String categoryName;
 
-  CategoryProducts({Key? key, required this.category_name}) : super(key: key);
+  CategoryProducts({Key? key, required this.categoryName}) : super(key: key);
 
   @override
   _CategoryProductsState createState() => _CategoryProductsState();
@@ -15,11 +15,10 @@ class _CategoryProductsState extends State<CategoryProducts> {
   @override
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
-    final double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: Text(widget.category_name),
+        title: Text(widget.categoryName),
         centerTitle: true,
         elevation: 0.0,
       ),

@@ -1,6 +1,7 @@
 import 'package:daily_needs/constants/strings.dart';
 import 'package:daily_needs/screens/AuthenticationScreens/signup.dart';
 import 'package:daily_needs/screens/authenticationScreens/recoveryPassword.dart';
+import 'package:daily_needs/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
 
@@ -13,6 +14,7 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
   bool isRemember = false;
+  bool _obscurePassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -125,10 +127,18 @@ class _SignInState extends State<SignIn> {
                                 20.0,
                               ),
                               child: TextField(
-                                obscureText: true,
+                                obscureText: _obscurePassword,
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   hintText: 'Enter Password',
+                                  suffixIcon: InkWell(
+                                    onTap: () {
+                                      setState(() {
+                                        _obscurePassword = !_obscurePassword;
+                                      });
+                                    },
+                                    child: Icon(Icons.remove_red_eye_outlined),
+                                  ),
                                   hintStyle: TextStyle(
                                       color: HexColor(COLOR_DARK_GREY)),
                                   fillColor: HexColor(COLOR_LIGHT_GREY_001),
@@ -239,7 +249,10 @@ class _SignInState extends State<SignIn> {
                                 ),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacement(context,
+                                  MaterialPageRoute(builder: (_) => Home()));
+                            },
                           ),
                         ),
                       ),

@@ -1,5 +1,4 @@
 import 'package:daily_needs/constants/strings.dart';
-import 'package:daily_needs/screens/order/orderDetails.dart';
 import 'package:daily_needs/screens/products/details.dart';
 import 'package:daily_needs/widgets/bottomNav.dart';
 import 'package:daily_needs/widgets/offerWidg.dart';
@@ -91,7 +90,7 @@ class _OfferState extends State<Offer> {
                                   width: 5.0,
                                 ),
                                 DropdownButton(
-                                  hint: Text("Select Filter"),
+                                  hint: Text("Select One"),
                                   value: chooseValue,
                                   onChanged: (newValue) {
                                     setState(() {
