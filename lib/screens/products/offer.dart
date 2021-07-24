@@ -126,7 +126,9 @@ class _OfferState extends State<Offer> {
                                 onTap: () => Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (_) => Details(),
+                                    builder: (_) => Details(
+                                      productImage: "assets/images/3.png",
+                                    ),
                                   ),
                                 ),
                                 child: OfferWidg(
