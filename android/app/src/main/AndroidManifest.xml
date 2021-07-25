@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.grapex.daily_needs">
    <application
-        android:label="daily_needs"
+        android:label="Daily Needs"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
