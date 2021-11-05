@@ -10,17 +10,14 @@ class OnBoarding {
 List<OnBoarding> contents = [
   OnBoarding(
       image: "assets/images/onboarding1.jpg",
-      title: "This is first title",
-      description:
-          "This is first title This is first title This is first title"),
+      title: "Shop your daily needs",
+      description: "You won't get anything cheaper than Daily Needs."),
   OnBoarding(
       image: "assets/images/onboarding2.jpg",
-      title: "This is second title",
-      description:
-          "This is second title This is second title This is second title"),
+      title: "Exciting Offers",
+      description: "Get new offers and great deals everyday, every hour."),
   OnBoarding(
       image: "assets/images/onboarding3.jpg",
-      title: "This is third title",
-      description:
-          "This is third title This is third title This is third title")
+      title: "1000+ products",
+      description: "Shop and get delivey at your convenience.")
 ];
